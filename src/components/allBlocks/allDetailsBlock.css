@@ -1,0 +1,174 @@
+.allDetailsBlockMainCon{
+    display:flex;
+    width: 100%;
+    border-top: 1px solid #1E2D3D;
+    margin-top: 55px;
+    height: 90%;
+}
+
+
+.allDetailsSideBar{
+    width: 300px;
+    border-right: 1px solid #1E2D3D;
+    height: 100%;
+}
+
+.allDetailsRightSideHeaderCon{
+    display: flex;
+    width: 100%;
+}
+
+.sideEachDropdownCon{
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid #1E2D3D;
+    height: 53px;
+    color: #607B96;
+    font-family: "Fira Code";
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    padding-left: 23px;
+    padding-right: 10px;
+    background-color: transparent;
+    gap:11px;
+    cursor: pointer;
+}
+
+.selectedsideEachDropdownCon{
+    color: #fff;
+}
+
+.dropdownArrow svg{
+    width: 8.5px;
+    height: 6px;
+    transition-duration:0.5s;
+}
+
+.selectedArrow svg{
+    transform: rotate(180deg);
+}
+
+.selectedArrow svg path{
+    fill: #fff;
+}
+
+.headerSectionNamesCon{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    color: #607B96;
+    font-family: "Fira Code";
+    font-size: 16px;
+    font-weight: 400;
+    gap: 10px;
+    padding: 12px;
+    border-right: 1px solid #1E2D3D;
+    border-bottom: 1px solid #1E2D3D;
+    cursor: pointer;
+}
+
+.sectionBtnCross svg{
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    margin-left: 30px;
+}
+
+.headerSectionNamesCon:hover{
+    .sectionBtnCross svg path{
+        fill: #fff;
+    }
+}
+
+.allDetailsRightSideCon,
+.slectedSectionMainCon{
+    width: 100%;
+}
+
+.slectedSectionMainCon{
+    transition-duration:0.5s;
+    position: relative;
+}
+
+.sideEachDropdownBottomFoldersCon{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px solid #1E2D3D;
+}
+
+.showingComapnysCon{
+    margin-left:36px;
+}
+
+.nxtCompanyIcon{
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+}
+
+.mainFolderHeading{
+    width: 100%;
+    border-bottom: none;
+}
+
+.showingComapny{
+    display: flex;
+    align-items: center;
+    color: #607B96;
+    font-family: "Fira Code";
+    font-size: 16px;
+    font-weight: 400;
+    gap:8px;
+    margin-bottom:13px;
+    cursor: pointer;
+}
+
+.selectedFolderIcon svg path{
+    fill: #EA2D2E;
+}
+
+/* TAB */
+@media only screen and (min-width: 801px) and (max-width: 1280px) {
+    .allDetailsBlockMainCon{
+        margin-top: 39px;
+    }
+
+    .allDetailsSideBar{
+        width: 170px;
+        border-right: 1px solid #1E2D3D;
+    }
+
+    .sideEachDropdownCon{
+        height: 40px;
+        padding-left: 12px;
+        width: 170px;
+        font-size: 14px;
+    }
+
+    .headerSectionNamesCon{
+        height: 40px;
+        font-size: 14px;
+        gap: 7px;
+        padding: 8px;
+    }
+
+    .sectionBtnCross svg{
+        width: 10px;
+        height: 10px;
+    }
+
+    .showingComapny{
+        font-size: 14px;
+        gap:8px;
+    }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 800px) {
+    .allDetailsBlockMainCon{
+        margin-top: 0px;
+    }
+}
