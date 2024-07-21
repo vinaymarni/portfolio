@@ -8,9 +8,12 @@
 
 
 .allDetailsSideBar{
-    width: 300px;
+    min-width: 300px;
     border-right: 1px solid #1E2D3D;
     height: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .allDetailsRightSideHeaderCon{
@@ -112,6 +115,13 @@
 .mainFolderHeading{
     width: 100%;
     border-bottom: none;
+    color: #fff;
+    flex-direction: row-reverse;
+    display: flex;
+    margin-left: 0;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
 }
 
 .showingComapny{
@@ -123,7 +133,7 @@
     font-weight: 400;
     gap:8px;
     margin-bottom:13px;
-    cursor: pointer;
+    cursor: pointer !important;
 }
 
 .selectedFolderIcon svg path{
@@ -137,7 +147,7 @@
     }
 
     .allDetailsSideBar{
-        width: 170px;
+        min-width: 200px;
         border-right: 1px solid #1E2D3D;
     }
 
@@ -164,11 +174,45 @@
         font-size: 14px;
         gap:8px;
     }
+
+    .showingComapnysCon{
+        margin-left:20px;
+        max-width: 180px;
+    }
 }
 
 /* MOBILE */
 @media only screen and (max-width: 800px) {
     .allDetailsBlockMainCon{
         margin-top: 0px;
+    }
+
+    .allDetailsSideBar{
+        min-width: 120px;
+        border-right: 1px solid #1E2D3D;
+    }
+
+    .sideEachDropdownCon{
+        height: 40px;
+        padding-left: 12px;
+        width: 170px;
+        font-size: 14px;
+    }
+
+    .headerSectionNamesCon{
+        height: 40px;
+        font-size: 14px;
+        gap: 7px;
+        padding: 8px;
+    }
+
+    .sectionBtnCross svg{
+        width: 10px;
+        height: 10px;
+    }
+
+    .showingComapny{
+        font-size: 14px;
+        gap:8px;
     }
 }

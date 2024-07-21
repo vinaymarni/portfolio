@@ -8,7 +8,7 @@ const Expereince = ({}) => {
         <div className="expereinceMainCon">
             {companyDetails.map((eachOne, ind)=>{
                 return (
-                    <div key={`eachCard ${ind}`} id={`${eachOne.companyName}_block`} className="expereinceEachBox" >
+                    <div key={`eachCard ${ind}`} id={`${eachOne.name}_block`} className="expereinceEachBox" >
                         <div 
                             className="topCompanyDetailsBox" 
                             style={{ flexDirection: (ind%2) != 0 ? "row-reverse" : "" }} 
@@ -23,7 +23,7 @@ const Expereince = ({}) => {
                             </div>
 
                             <div className="topCompanyDetailsRightBox" style={{ alignItems: (ind%2) != 0 ? "flex-end" : "flex-start" }} >
-                                <p className="comapanyName">{eachOne.companyName}</p>
+                                <p className="comapanyName">{eachOne.name}</p>
                                 <p className="comapanyJoiningDate">{eachOne.joinDate}</p>
                             </div>
                         </div>
@@ -53,7 +53,7 @@ const Expereince = ({}) => {
                                 className="CompanyCardRightSideSpace"                             
                                 style={{ flexDirection: (ind%2) != 0 ? "row-reverse" : "" }} 
                             >
-                                <h2 className="companyNameVertical">{eachOne.companyName}</h2>
+                                <h2 className="companyNameVertical">{eachOne.name}</h2>
                             </div>
                         </div>
                     </div>

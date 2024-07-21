@@ -1,19 +1,41 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import './allDetailsBlock.css';
-import { arrowIcon, companyIcon, crossIcon, folderIcon, singleLineArrowIcon } from '../../icons';
+import { arrowIcon, companyIcon, crossIcon, folderIcon, redFolderIcon, singleLineArrowIcon } from '../../icons';
 import Button from '../../commonElements/Button';
 import Expereince from '../expereince/Expereince';
-import { companyDetails, srollIntoView } from '../../data';
+import { companyDetails, educationDetails, projectDetails, skillsDetails, srollIntoView, profileDetails } from '../../data';
+import Education from '../education/Education';
+import DetailsFolder from '../../commonElements/DetailsFolder';
+import Skills from '../skills/Skills';
+import Projects from '../projects/Projects';
+import Profile from '../profile/Profile';
 
 const DetailsBlock = ({block, onSelect, selectedSections}) => {
+    const [folderBlock, setFolderBlock ] = useState({
+        experience: true, education: true, skill:true , project:true, profile: true
+    });
 
-    const [selectedCompany, setSelectedCompany] = useState(companyDetails[0].companyName);
+    const [selectedItem, setSelectedItem] = useState({
+        company: companyDetails[0].name, 
+        school: educationDetails[0].name,
+        skill: skillsDetails[0].name,
+        project: projectDetails[0].name,
+        profile: profileDetails[0].name
+    });
 
-    const onSelectCompany = (companyName) => {
-        setSelectedCompany(companyName);
-        srollIntoView(`${companyName}_block`);
+    const onSelectBlock = (name, identifier, key) => {
+        if(key){
+            let oldObj = {...folderBlock};
+            oldObj[key] = !oldObj[key];
+            setFolderBlock(oldObj);
+        }else{
+            let oldSelectObj = {...selectedItem};
+            oldSelectObj[identifier] = name;
+            setSelectedItem(oldSelectObj);
+            srollIntoView(`${name}_block`);
+        }
     };
-
+    
     return (
         <div className="allDetailsBlockMainCon">
             <div className="allDetailsSideBar">
@@ -40,20 +62,16 @@ const DetailsBlock = ({block, onSelect, selectedSections}) => {
                 />
 
                 {block == "Experience" &&
-                <div className="sideEachDropdownBottomFoldersCon" >
-                    <p className="sideEachDropdownCon mainFolderHeading" >{singleLineArrowIcon} {folderIcon} Experience </p>
-                    <div className="showingComapnysCon">
-                        {companyDetails.map((eachCmny, eachInd)=>{
-                            return(
-                                <p key={`cmpny_${eachInd}`} className={`showingComapny ${selectedCompany == eachCmny.companyName ? "selectedsideEachDropdownCon" : "" }`} onClick={()=>onSelectCompany(eachCmny.companyName)}>
-                                    <span style={{opacity: selectedCompany == eachCmny.companyName ? "1" : "0.5" }} className="nxtCompanyIcon">{companyIcon}</span> 
-                                    <span className={`${selectedCompany == eachCmny.companyName ? "selectedsideEachDropdownCon" : "" }`}>{eachCmny.companyName}</span>
-                                </p>
-                            )
-                        })}
-                    
-                    </div>
-                </div>
+                <DetailsFolder 
+                    key="expericeFolder"
+                    title="Experience"
+                    keyName="experience"
+                    onFunctionCall={onSelectBlock}
+                    data={companyDetails}
+                    section="company"
+                    folderBlock={folderBlock}
+                    selectedItem={selectedItem}
+                />
                 }
 
                 <Button
@@ -66,6 +84,19 @@ const DetailsBlock = ({block, onSelect, selectedSections}) => {
                     value={"Skill"}
                     icon={<span className={`dropdownArrow ${block == "Skill" ? "selectedArrow" : ""}`}>{arrowIcon}</span>}
                 />
+
+                {block == "Skill" &&
+                <DetailsFolder 
+                    key="skillsFolder"
+                    title="Skills"
+                    keyName="skill"
+                    onFunctionCall={onSelectBlock}
+                    data={skillsDetails}
+                    section="skill"
+                    folderBlock={folderBlock}
+                    selectedItem={selectedItem}
+                />
+                }
                 <Button
                     key="_education_dropwon"
                     buttonId ="_education_dropwon"
@@ -76,6 +107,20 @@ const DetailsBlock = ({block, onSelect, selectedSections}) => {
                     value={"Education"}
                     icon={<span className={`dropdownArrow ${block == "Education" ? "selectedArrow" : ""}`}>{arrowIcon}</span>}
                 />
+
+                {block == "Education" &&
+                <DetailsFolder 
+                    key="educationFolder"
+                    title="Education"
+                    keyName="education"
+                    onFunctionCall={onSelectBlock}
+                    data={educationDetails}
+                    section="school"
+                    folderBlock={folderBlock}
+                    selectedItem={selectedItem}
+                />
+                }
+                
                 <Button
                     key="_projects_dropwon"
                     buttonId ="_projects_dropwon"
@@ -86,6 +131,18 @@ const DetailsBlock = ({block, onSelect, selectedSections}) => {
                     value={"Projects"}
                     icon={<span className={`dropdownArrow ${block == "Projects" ? "selectedArrow" : ""}`}>{arrowIcon}</span>}
                 />
+                {block == "Projects" &&
+                <DetailsFolder 
+                    key="ProjectsFolder"
+                    title="Projects"
+                    keyName="project"
+                    onFunctionCall={onSelectBlock}
+                    data={projectDetails}
+                    section="project"
+                    folderBlock={folderBlock}
+                    selectedItem={selectedItem}
+                />
+                }
 
                 <Button
                     key="_profile_dropwon"
@@ -98,6 +155,19 @@ const DetailsBlock = ({block, onSelect, selectedSections}) => {
                     icon={<span className={`dropdownArrow ${block == "Profile" ? "selectedArrow" : ""}`}>{arrowIcon}</span>}
                 />
 
+                {block == "Profile" &&
+                <DetailsFolder 
+                    key="ProfileFolder"
+                    title="profile"
+                    keyName="profile"
+                    onFunctionCall={onSelectBlock}
+                    data={profileDetails}
+                    section="profile"
+                    folderBlock={folderBlock}
+                    selectedItem={selectedItem}
+                />
+                }
+
                 <Button
                     key="_contact-me_dropwon"
                     buttonId ="_contact-me_dropwon"
@@ -108,9 +178,9 @@ const DetailsBlock = ({block, onSelect, selectedSections}) => {
                     value={"Contact-me"}
                     icon={<span className={`dropdownArrow ${block == "Contact-me" ? "selectedArrow" : ""}`}>{arrowIcon}</span>}
                 />
-
             </div>
             <div className="allDetailsRightSideCon">
+
 {/* Selected Items Header */}
                 <div className="allDetailsRightSideHeaderCon">
                     {selectedSections && selectedSections.length > 0 && 
@@ -129,9 +199,29 @@ const DetailsBlock = ({block, onSelect, selectedSections}) => {
 
 {/* Selected Section Display Container */}
                 <div className='slectedSectionMainCon'>
-                    <hr className="hrLineInCenter" />
                     {block == "Experience" &&
-                    <Expereince  />
+                    <Fragment>
+                        <hr className="hrLineInCenter" />
+                        <Expereince  />
+                    </Fragment>
+                    }
+
+                    {block == "Education" && <Education /> }
+                    
+                    {block == "Skill" &&
+                    <Skills 
+                        onSelectBlock={onSelectBlock}
+                        selectedOne={selectedItem.skill}
+                    />
+                    }
+
+                    {block == "Projects" && <Projects /> }
+
+                    {block == "Profile" &&
+                    <Profile
+                        onSelectBlock={onSelectBlock}
+                        selectedOne={selectedItem.profile}
+                    />
                     }
                 </div>
 

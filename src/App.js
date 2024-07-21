@@ -41,13 +41,9 @@ function App() {
       <div className="appInnerContainer">
         <Header block={block} onSelect={onSelect} />
           {block == "Hello" ?
-          <main className='companentsMainCon'>
               <Home />
-          </main>
           :
-          <main>
               <DetailsBlock block={block} onSelect={onSelect} selectedSections={selectedSections} />
-          </main>
           }
         
         <Footer />
