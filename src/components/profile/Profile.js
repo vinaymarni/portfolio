@@ -41,15 +41,10 @@ export default function Profile({onSelectBlock, selectedOne}) {
 
             <div className="profileRightSideCon">
                 <MyProfile />
-                
                 <MyExperince />
-
                 <MySkills />
-
                 <MyProjects />
-
                 <MyEducation />
-                
             </div>
         </div>
     )

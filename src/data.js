@@ -232,52 +232,152 @@ export const skillsDetails = [
 export const projectDetails = [
     {
         name:"Get Right Property",
-        technologiesUsed: [css, Javascript, html],
+        technologiesUsed: [
+            {name: "CSS", url:css},
+            {name: "Javascript", url:Javascript},
+            {name: "html", url:html},
+        ],
         description:"Developed secure real estate site with Java, Spring Boot, React, AWS.",
-        link:""
+        link:"",
+        contant: "Developed a real estate website with Java, Spring Boot, ReactJs, and NextJs. Integrated security using Spring Security and JWT, and efficient search with Solr. Hosted on AWS EC2 with S3 and RDS storage. Implemented CI/CD pipelines using Jenkins and Maven.",
+        images: [
+            "https://www.shutterstock.com/shutterstock/photos/1932042689/display_1500/stock-photo-businessman-using-mobile-smart-phone-business-global-internet-connection-application-technology-1932042689.jpg",
+            "https://thumbs.dreamstime.com/z/businessman-shows-modern-technology-business-as-concept-30551144.jpg",
+            "https://cdn.pixabay.com/photo/2016/10/11/21/43/geometric-1732847_640.jpg",
+            "https://i.pinimg.com/originals/73/dd/3b/73dd3bcbffbf8080296d7a289d251620.jpg",
+            "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/03/technology-trend-freepik-1647963838.jpg",
+            "https://www.shutterstock.com/shutterstock/photos/1932042689/display_1500/stock-photo-businessman-using-mobile-smart-phone-business-global-internet-connection-application-technology-1932042689.jpg",
+            "https://thumbs.dreamstime.com/z/businessman-shows-modern-technology-business-as-concept-30551144.jpg",
+            "https://cdn.pixabay.com/photo/2016/10/11/21/43/geometric-1732847_640.jpg",
+            "https://i.pinimg.com/originals/73/dd/3b/73dd3bcbffbf8080296d7a289d251620.jpg",
+            "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/03/technology-trend-freepik-1647963838.jpg",
+        ],
+        videos: [
+            "https://youtu.be/C4XhrSZNMDE?si=j-irqIOM_-yztLQY",
+            "https://youtu.be/9BmYEVNgzqA?si=Xkk30-cO9RUxAeci",
+            "https://youtu.be/cJpkcmXOjws?si=m4s0Y_ZlbISua5kJ"
+        ],
     },
     {
         name:"Rp Clan Internal Application",
-        technologiesUsed: [css, Javascript, html],
+        technologiesUsed: [
+            {name: "CSS", url:css},
+            {name: "Javascript", url:Javascript},
+            {name: "html", url:html},
+        ],        
         description:"Streamlined property listings with efficient data approval system.",
-        link:""
+        link:"",
+        contant: "Developed and implemented an internal data approval system for Get Right Property, streamlining workflows for property listings review and approval. Ensured data accuracy, security, and compliance with protection standards. Utilized modern technologies to automate processes, enhancing efficiency and overall data management.",
+        images: [
+            "https://cdn.pixabay.com/photo/2016/10/11/21/43/geometric-1732847_640.jpg",
+            "https://i.pinimg.com/originals/73/dd/3b/73dd3bcbffbf8080296d7a289d251620.jpg",
+            "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/03/technology-trend-freepik-1647963838.jpg",
+            "https://www.shutterstock.com/shutterstock/photos/1932042689/display_1500/stock-photo-businessman-using-mobile-smart-phone-business-global-internet-connection-application-technology-1932042689.jpg",
+            "https://thumbs.dreamstime.com/z/businessman-shows-modern-technology-business-as-concept-30551144.jpg",
+            "https://cdn.pixabay.com/photo/2016/10/11/21/43/geometric-1732847_640.jpg",
+            "https://i.pinimg.com/originals/73/dd/3b/73dd3bcbffbf8080296d7a289d251620.jpg",
+            "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/03/technology-trend-freepik-1647963838.jpg",
+        ],
+        videos: [
+            "https://youtu.be/9BmYEVNgzqA?si=Xkk30-cO9RUxAeci",
+            "https://youtu.be/cJpkcmXOjws?si=m4s0Y_ZlbISua5kJ"
+        ],
     },
     {
         name:"Expense Tracker ",
-        technologiesUsed: [css, Javascript, html],
+        technologiesUsed: [
+            {name: "CSS", url:css},
+            {name: "Javascript", url:Javascript},
+            {name: "html", url:html},
+        ],        
         description:"Streamlined property listings with efficient data approval system.",
-        link:""
+        link:"",
+        contant: "An efficient expense tracking application enabling users to monitor spending and split expenses into groups for simplified management and collaboration. Users can easily categorize expenditures and analyze financial trends, promoting effective budgeting and financial transparency.",
+        images: [
+            "https://cdn.pixabay.com/photo/2016/10/11/21/43/geometric-1732847_640.jpg",
+            "https://i.pinimg.com/originals/73/dd/3b/73dd3bcbffbf8080296d7a289d251620.jpg",
+            "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/03/technology-trend-freepik-1647963838.jpg",
+        ],
+        videos: [
+            "https://youtu.be/C4XhrSZNMDE?si=j-irqIOM_-yztLQY",
+            "https://youtu.be/9BmYEVNgzqA?si=Xkk30-cO9RUxAeci",
+            "https://youtu.be/cJpkcmXOjws?si=m4s0Y_ZlbISua5kJ",
+            "https://youtu.be/C4XhrSZNMDE?si=j-irqIOM_-yztLQY",
+            "https://youtu.be/9BmYEVNgzqA?si=Xkk30-cO9RUxAeci",
+            "https://youtu.be/cJpkcmXOjws?si=m4s0Y_ZlbISua5kJ"
+        ],
     },
     {
         name:"Hospital Management System",
-        technologiesUsed: [css, Javascript, html],
+        technologiesUsed: [
+            {name: "CSS", url:css},
+            {name: "Javascript", url:Javascript},
+            {name: "html", url:html},
+        ],        
         description:"Built web app for booking, health records, and management.",
-        link:""
+        link:"",
+        contant: "Website that allows you to add remove update and get information on trainers and trainees who are present in a facility.",
+        images: [
+            "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/03/technology-trend-freepik-1647963838.jpg",
+            "https://www.shutterstock.com/shutterstock/photos/1932042689/display_1500/stock-photo-businessman-using-mobile-smart-phone-business-global-internet-connection-application-technology-1932042689.jpg",
+            "https://thumbs.dreamstime.com/z/businessman-shows-modern-technology-business-as-concept-30551144.jpg",
+            "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/03/technology-trend-freepik-1647963838.jpg",
+        ],
+        videos: [
+            "https://youtu.be/C4XhrSZNMDE?si=j-irqIOM_-yztLQY",
+            "https://youtu.be/9BmYEVNgzqA?si=Xkk30-cO9RUxAeci",
+            "https://youtu.be/cJpkcmXOjws?si=m4s0Y_ZlbISua5kJ"
+        ],
     },
     {
         name:"PDF to IMAGE Converter",
-        technologiesUsed: [css, Javascript, html],
+        technologiesUsed: [
+            {name: "CSS", url:css},
+            {name: "Javascript", url:Javascript},
+            {name: "html", url:html},
+        ],        
         description:"Converts PDFs to customizable images in JPEG, JPG, PNG formats; GitHub code available.",
-        link:""
+        link:"",
+        contant: "This project converts PDFs into customizable named images, supporting JPEG, JPG, and PNG formats. It offers flexibility and personalization, with source code available on GitHub for implementation insights and functionality customization.",
+        images: [],
+        videos: [],
     },
     {
         name:"Training Feedback Management System",
-        technologiesUsed: [css, Javascript, html],
+        technologiesUsed: [
+            {name: "CSS", url:css},
+            {name: "Javascript", url:Javascript},
+            {name: "html", url:html},
+        ],        
         description:"Website for managing trainer and trainee information in facility.",
-        link:""
+        link:"",
+        contant: "Website that allows you to add remove update and get information on trainers and trainees who are present in a facility.",
+        images: [
+            "https://cdn.pixabay.com/photo/2016/10/11/21/43/geometric-1732847_640.jpg",
+            "https://i.pinimg.com/originals/73/dd/3b/73dd3bcbffbf8080296d7a289d251620.jpg",
+            "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/03/technology-trend-freepik-1647963838.jpg",
+        ],
+        videos: ["https://youtu.be/NO9OkYDmCeA?si=Pp5jXZjsYFmPGURZ"],
     },
     {
         name:"Personal Portfolio Project",
-        technologiesUsed: [css, Javascript, html],
+        technologiesUsed: [
+            {name: "CSS", url:css},
+            {name: "Javascript", url:Javascript},
+            {name: "html", url:html},
+        ],        
         description:"Highlighting my journey, skills, and expertise in development.",
-        link:""
+        link:"",
+        contant: "A showcase of my professional journey, skills, and accomplishments, highlighting projects and experiences in software development and Featuring a collection of works demonstrating expertise skills.",
+        images: [],
+        videos: [],
     },
 ];
 
 
 export const profileDetails = [
     {
-        name:"About Me",
+        name:"About Me", 
         designetion: "I am a Software Developer",
         description:"A passionate Software Developer, I thrive on learning and building innovative solutions. I specialize in infrastructure, containerization, and Serverless/Cloud technologies, driven by a love for programming and community contribution.",
     },

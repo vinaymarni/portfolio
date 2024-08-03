@@ -75,15 +75,154 @@
     margin-bottom: 28px;
 }
 
+.profileExperinceCard{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.profileExperinceCardLeftCon{
+    padding-right:30px;
+}
+
+.profileExperinceCardRightCon{
+
+}
+
+.profileExperinceHeading{
+    color: #9747FF;
+    font-size: 29px;
+    font-weight: 700;
+    white-space: nowrap;
+    font-family: Quicksand;
+}
+
+.profileExperinceDate{
+    color: #F3F8FF;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    white-space: nowrap;
+    font-family: Manrope;
+}
+
+.profileExperinceRoll{
+    color: #81A1C1;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;;
+    font-family: Manrope;
+    margin-bottom: 10px;
+}
+
+.profileExperincePoints{
+    color: #FFF;
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 22px;
+    font-family: Outfit;
+    margin-bottom: 10px;
+}
+
+.mySkillsCard{
+    margin-bottom: 40px;
+}
+
+.mySkillsCardContant{
+    color: #FFF;
+    font-family: Outfit;
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+.mySkillsCardHeading{
+    color: #FEA55F;
+    font-family: Quicksand;
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+
+.profileProjectCardRightCon{
+
+}
+
+.myProjectName{
+    white-space: normal;
+    width: 292px;
+    margin-right: 10px;
+}
+
+.myProjectDescription{
+    color: #FFF;
+    font-family: Outfit;
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 22px; /* 115.789% */
+    margin-top: 10px;
+}
+
+.myProjectTechStack span{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 16px; /* 133.333% */
+}
+
+.myEducationInnerIcon{
+    width: 16.222px;
+    height: 14.6px;
+    margin-right: 8px;
+}
+
+.myEducationUniversity{
+    color: #FFF;
+    font-family: "Fira Code";
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.myEducationDate{
+    color: #607B96;
+    font-family: Manrope;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%; /* 27px */
+}
+
+.myEducationBranch{
+    color: #DEDEDE;
+    font-family: Manrope;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.myEducationName{
+    color: #43D9AD;
+    font-family: Manrope;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.myEducationCard{
+    margin-bottom:32px;
+}
 
 /* TAB */
 @media only screen and (min-width: 801px) and (max-width: 1280px) {
     .profileUserHeading{
-        font-size: 28px;
+        font-size: 20px;
     }
-    
+
     .profileRollText{
-        font-size: 22px;
+        font-size: 16px;
         margin-bottom: 20px;
     }
 
@@ -99,12 +238,108 @@
     .profileEachBlock{
         margin-bottom: 40px;
     }
+
+    .myProfileDesignetion{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .myProfileObjective{
+        font-size: 16px;
+        margin-bottom: 20px;
+        line-height: 20px;
+        margin-bottom: 0;
+    }
+
+    .profileExperinceHeading{
+        font-size: 20px;
+    }
+    
+    .profileExperinceDate{
+        font-size: 12px;
+    }
+    
+    .profileExperinceRoll{
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+    
+    .profileExperincePoints{
+        font-size: 14px;
+        margin-bottom: 6px;
+        line-height: 20px;
+    }
+    
+    .mySkillsCard{
+        margin-bottom: 26px;
+    }
+
+    .mySkillsCardContant{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .mySkillsCardHeading{
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+
+    .profileExperinceCardLeftCon{
+        padding-right:20px;
+    }
+
+    .myProjectName{
+        width: 150px;
+        margin-right: 10px;
+    }
+
+    
+    .myProjectDescription{
+        font-size: 16px;
+        line-height: 18px; 
+        margin-top: 6px;
+    }
+
+    
+    .myEducationUniversity{
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .myEducationDate{
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    .myEducationBranch{
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+    .myEducationName{
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    .myEducationCard{
+        margin-bottom:20px;
+    }
+
     
 }
 
 
 /* MOBILE */
 @media only screen and (max-width: 800px) {
+    .profileUserHeading{
+        font-size: 16px;
+    }
+    
+    .profileRollText{
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
     .resumeBtn{
         border-radius: 4px;
         font-size: 14px;
@@ -112,5 +347,80 @@
         padding-left: 6px;
         padding-right: 6px;
         margin-top:16px;
+    }
+
+    .myProfileDesignetion{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .myProfileObjective{
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .profileExperinceHeading{
+        font-size: 20px;
+    }
+    
+    .profileExperinceDate{
+        font-size: 12px;
+    }
+    
+    .profileExperinceRoll{
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+    
+    .profileExperincePoints{
+        font-size: 14px;
+        margin-bottom: 6px;
+        line-height: 18px;
+    }
+
+    .mySkillsCard{
+        margin-bottom: 26px;
+    }
+    
+    .mySkillsCardContant{
+        font-size: 12px;
+        line-height: 16px;
+    }
+    
+    .mySkillsCardHeading{
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+    .profileExperinceCardLeftCon{
+        padding-right:15px;
+    }
+
+    .myProjectDescription{
+        font-size: 14px;
+        line-height: 18px; 
+    }
+
+    .myEducationUniversity{
+        font-size: 12px;
+    }
+    
+    .myEducationDate{
+        font-size: 12px;
+        line-height: 150%;
+    }
+    
+    .myEducationBranch{
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    
+    .myEducationName{
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+    
+    .myEducationCard{
+        margin-bottom:15px;
     }
 }

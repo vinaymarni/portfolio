@@ -4,7 +4,7 @@ import Button from '../../commonElements/Button'
 
 export default function MyProfile() {
     return (
-        <div className="profileEachBlock">
+        <div className="profileEachBlock" id={`${"About Me"}_block`}>
             <p className="eachSkillsBtn" >
                 <hr className='eachSkillsBtnHrLine' />
                 <CompanyIconEl className="companyIconEl" />

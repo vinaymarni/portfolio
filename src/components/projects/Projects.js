@@ -1,12 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from '../../commonElements/Button';
 import projectPosterImg from '../../images/projectPoster.jpg';
 import './projects.css';
 import { projectDetails } from '../../data';
+import ProjectDetailsPopup from './ProjectDetailsPopup';
 
 export default function Projects() {
+  const [popupData, setPopupData ] = useState({isPopup: false});
+
+  const onPopupClick = (identifier, data, index) => {
+    let obj = {};
+    if(identifier == "OPEN"){
+        obj = {
+            isPopup: true,
+            data: data,
+            index: index,
+        }
+    }else{
+        obj = { isPopup: false}
+    }
+
+    setPopupData(obj);
+  };
+
   return (
     <div className="projectsMainCon">
+
+        {popupData.isPopup &&
+        <ProjectDetailsPopup 
+            onPopupClick={onPopupClick} 
+            popupData={popupData}
+        />
+        }
+
         {projectDetails.map((eachCrad, index)=>{
             return(
                 <div key={`projCard_${index}`}  id={`${eachCrad.name}_block`} className="projectCard">
@@ -17,7 +43,7 @@ export default function Projects() {
                             <div className='innerProjectTechnologiesCon'>
                                 {eachCrad.technologiesUsed.map((eachTech, eachIndex)=>{
                                     return(
-                                        <img key={`eachTech_${eachIndex}`} alt="" src={eachTech} className="projectTechImg" />
+                                        <img key={`eachTech_${eachIndex}`} alt="" src={eachTech.url} className="projectTechImg" />
                                     )
                                 })}
                             </div>
@@ -29,7 +55,7 @@ export default function Projects() {
                                 buttonId ="project_btn_1"
                                 buttonConClassName="projectBtnCon"
                                 buttonClassName="projectBtn"
-                                onSubmit={(e)=>("")}
+                                onSubmit={(e)=>onPopupClick("OPEN", eachCrad, index)}
                                 title="view-project"
                             />
                         </div>
